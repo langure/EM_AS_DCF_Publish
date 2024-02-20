@@ -101,3 +101,4 @@ dmypy.json
 cython_debug/
 
 .idea/
+/workdir/soul_emotions.db

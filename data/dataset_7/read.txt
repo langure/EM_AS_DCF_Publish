@@ -1,0 +1,14 @@
+removed the <cause><\cause> tags from the xml
+emotions: Happiness, Sadness, Anger, Fear, Surprise, Disgust, Shame
+
+tags:
+
+happy
+sad
+surprise
+disgust
+anger
+shame
+fear
+
+I had to manually reformat the file since the original presented many parsing issues. The formatted file is emotions_formatted.xml
