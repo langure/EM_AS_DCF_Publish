@@ -22,6 +22,9 @@ def transform_data():
 
 
 def load_datasources(datasources):
+
+    if not os.path.exists(WORK_DIR):
+        os.makedirs(WORK_DIR)
     db_driver = DBDriver(os.path.join(WORK_DIR, 'soul_emotions.db'))
     db_driver.create_tables()
 
