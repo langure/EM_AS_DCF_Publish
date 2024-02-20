@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score, f1_score
 from sklearn.model_selection import train_test_split
 
-MAX_LOGISTIC_ITERATIONS = 10
+MAX_LOGISTIC_ITERATIONS = 1000
 
 ROOT_PATH = '../workdir'
 LINEAR_WORKDIR_PATH = os.path.join(ROOT_PATH, 'linear_workdir')
