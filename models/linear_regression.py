@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score, f1_score
 from sklearn.model_selection import train_test_split
 
-MAX_LOGISTIC_ITERATIONS = 1000
+MAX_LOGISTIC_ITERATIONS = 10
 
 ROOT_PATH = '../workdir'
 LINEAR_WORKDIR_PATH = os.path.join(ROOT_PATH, 'linear_workdir')
@@ -183,7 +183,7 @@ results_data, trained_models = train_all_datasets(shared_emotions_datasets, MAX_
 results_df = pd.DataFrame(results_data)
 results_df.to_csv(os.path.join(LINEAR_WORKDIR_PATH, 'shared_classification_results.csv'), index=False)
 shared_emotion_classifier = EmotionClassifier(trained_models)
-with open(ROOT_PATH + 'shared_emotion_classifier.pkl', 'wb') as file:
+with open(os.path.join(LINEAR_WORKDIR_PATH, 'shared_emotion_classifier.pkl'), 'wb') as file:
     pickle.dump(shared_emotion_classifier, file)
 
 print("Training models for quadrant mapping...")
@@ -191,7 +191,7 @@ results_data, trained_models = train_all_datasets(quadrant_emotions_datasets, MA
 results_df = pd.DataFrame(results_data)
 results_df.to_csv(os.path.join(LINEAR_WORKDIR_PATH, 'quadrant_classification_results.csv'), index=False)
 quadrant_emotion_classifier = EmotionClassifier(trained_models)
-with open(ROOT_PATH + 'quadrant_emotion_classifier.pkl', 'wb') as file:
+with open(os.path.join(LINEAR_WORKDIR_PATH, 'quadrant_emotion_classifier.pkl'), 'wb') as file:
     pickle.dump(quadrant_emotion_classifier, file)
 
 print("Cross dataset prediction for source labels...")
