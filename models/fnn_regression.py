@@ -62,9 +62,6 @@ def split_data_by_dataset(data):
         if dataset_id not in datasets:
             datasets[dataset_id] = []
         datasets[dataset_id].append(row)
-    for dataset_id, dataset in datasets.items():
-        if len(dataset) > 1000:
-            datasets[dataset_id] = dataset[:1000]
     return datasets
 
 
