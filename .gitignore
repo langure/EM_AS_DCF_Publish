@@ -102,3 +102,4 @@ cython_debug/
 
 .idea/
 /workdir/soul_emotions.db
+/workdir/linear_workdir/shared_classification_results.csv
