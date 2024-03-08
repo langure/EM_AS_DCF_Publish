@@ -3,6 +3,14 @@
 ## Introduction
 The idea here is to show how the performance of a machine learning model, regardless of the percentage of accuracy, can be significately influenced by modifying the Emotion Model, having everything else the same.
 
+### Steps to reproduce:
+
+- Run the main.py file, to execute all the loaders and transform the individual datasets into the centralized sqlite database.
+- Inside the /models directory, execute the corresponding python file to execute the data splitting, machine learning training and evaluation:
+- - Linear
+  - FeedForward Neural Network
+  - BERT based regression
+
 These are the datasets used:
 
 1.- Emotion Detection from Text (https://data.world/crowdflower/sentiment-analysis-in-text)
